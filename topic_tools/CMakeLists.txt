@@ -184,7 +184,9 @@ if(BUILD_TESTING)
 endif()
 
 install(TARGETS relay_node relay throttle_node throttle drop_node drop mux_node mux demux_node demux delay_node delay
-  DESTINATION lib/${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION lib/${PROJECT_NAME}
 )
 
 install(DIRECTORY launch
